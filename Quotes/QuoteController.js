@@ -6,6 +6,15 @@ const QuoteModel = require('../Quotes/QuoteModel');
 exports.addQuote = async(req, res) => {
     try {
 
+        const {quote_id, quote_by} = req.body;
+
+        if( !quote_id || !quote_by || !req.body.quote) {
+            return res.status(400).json({
+                Status : 'Failure',
+                Message : 'Please fill all the fields'
+            })
+        }
+
         const quote = await QuoteModel.create(req.body);
         quote.save();
 

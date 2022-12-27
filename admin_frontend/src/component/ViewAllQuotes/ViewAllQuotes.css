@@ -1,0 +1,42 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-item {
+    /* background-color: rgb(212, 237, 109); */
+    margin: 20px;
+    padding: auto;
+    border-radius: 10px;
+
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+.nav-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.nav-line {
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.heading {
+    font-family: 'Prosto One', cursive;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto Condensed', sans-serif;
+
+}

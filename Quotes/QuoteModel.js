@@ -3,17 +3,17 @@ const mongoose = require("mongoose");
 const QuoteSchema = new mongoose.Schema({
   quote_id: {
     type: String,
-    required: false,
+    required: true,
   },
 
   quote_by : {
     type : String,
-    required : false
+    required : true
   },
 
   quote: {
     type: String,
-    required: false,
+    required: true,
   },
 });
 

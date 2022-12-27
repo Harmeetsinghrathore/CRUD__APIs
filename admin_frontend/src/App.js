@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import {Route, Routes, BrowserRouter} from 'react-router-dom';
+import { AddQuote } from './component/AddQuote/AddQuote';
+import { Dashboard } from './component/Dashboard/Dashboard';
+import { Login } from './component/login/Login';
+import { QuoteDisplay } from './component/QuoteDisplay/QuoteDisplay';
+import { ViewAllQuotes } from './component/ViewAllQuotes/ViewAllQuotes';
+import { EditQuote } from './component/EditQuote/EditQuote';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/add-quote' element={<AddQuote />} />
+        <Route path='/edit-quote' element={<EditQuote />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/quote-display' element={<QuoteDisplay />} />
+        <Route path='/view-all-quotes' element={<ViewAllQuotes />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
