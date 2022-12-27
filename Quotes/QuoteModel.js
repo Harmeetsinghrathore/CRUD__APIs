@@ -6,6 +6,11 @@ const QuoteSchema = new mongoose.Schema({
     required: false,
   },
 
+  quote_by : {
+    type : String,
+    required : false
+  },
+
   quote: {
     type: String,
     required: false,

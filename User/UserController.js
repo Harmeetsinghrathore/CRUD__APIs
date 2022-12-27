@@ -1,9 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config('SAIBABA/.env');
 const mongoose = require('mongoose');
 const userModel = require('./UserModel');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const dotenv = require('dotenv');
-dotenv.config('SAIBABA/.env');
 
 
 
@@ -22,6 +22,7 @@ exports.registerUser =  async(req, res) => {
 
         const {username, is_admin, email} = req.body;
 
+        console.log('wokring bro');
         const accessToken = jwt.sign({username, is_admin, email}, process.env.ACCESS_TOKEN_SECRET, { expiresIn : '1d'});
         const refreshToken = jwt.sign({username, is_admin, email}, process.env.REFRESH_TOKEN_SECRET, {expiresIn : '7d'});
 
