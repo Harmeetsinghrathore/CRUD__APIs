@@ -1,0 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* @font-face {
+    font-family: Helvetica-light;
+    src: url(../fonts/helvetica/helvetica-light-587ebe5a59211.ttf);
+}
+@font-face {
+    font-family: Helvetica-bold;
+    src: url(../fonts/helvetica/Helvetica-Bold.ttf);
+} */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background: #F2F2F2;
+  color: #7F7F7F;
+  position: relative;
+  z-index: 999999999999;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+html::after,
+body::after {
+  position: absolute;
+  width: 100%;
+  height: 100% !important;
+  left: 0;
+  top: 0;
+  background-image: url("saibg.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  z-index: -50;
+}
+.globa__width{
+    width: 680px;
+    margin: 0 auto;
+}
+
+
+
+
+/*===================== header section start ================= */
+header{
+    width: 100%;
+    overflow: hidden;
+}
+.header___top strong{
+ color: rgb(127, 127, 127);
+ font-weight: 500;
+}
+.header___top{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Wraper__{
+    width: 100%;
+}
+.Wraper__ h2 {
+    font-size: 24px;
+}
+.Wraper__ p {
+    font-size: 13px;
+    margin-top: -10px;
+}
+.top__img{
+    margin-top: -80px;
+    margin-bottom: 30px;
+    
+}
+.top__img img{
+    border: 2px solid #FFC000;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    padding: 7px;
+    background: #fff;
+}
+.sms___icon{
+    position: relative;
+    margin-bottom: 35px !important;
+}
+
+.sms___icon::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 27%;
+    left: 50%;
+    content: '';
+    background: #92d050;
+    border-radius: 50%;
+}
+.signup__and__registration a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(121, 120, 120);
+    transition: 0.3s ;
+}
+
+/*===================== main body section start ================= */
+
+.main___body{
+    background-color: #fff;
+    border: 1px solid #FFC000;
+    position: relative;
+    margin-top: 2.9rem;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 8%);
+    transition: 0.3s;
+}
+.main___body:hover{
+    box-shadow: 3px 0px 15px 0px rgb(0,0,0,0.2);
+}
+.main___body p{
+    padding: 10px 0px;
+    padding-bottom: 80px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.details____body{
+    width: 60%;
+    margin: 0 auto;
+}
+.footer___body__shear__icon span{
+    font-size: 18px;
+    font-style: italic;
+    margin-right: 20px;
+}
+.icon__body a{
+    display: inline-block;
+    padding: 2px 7px;
+    border: 1px solid #ddd;
+    margin: 3px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.icon__body a.twi__{
+    padding: 3px 7px;
+}
+.icon__body a i{
+    font-size: 18px;
+    transition: 0.2s;
+}
+.icon__body a i.facebook{
+    padding: 0px 1px;
+    color: #3b5998;
+}
+.icon__body a i.instragram {
+    padding: 4px 0;
+    color: #000;
+}
+.icon__body a i.twitter {
+    padding: 4px 0;
+    color: #00acee;
+}
+.icon__body a.face__{
+    border: 1px solid #3b5998;
+}
+.icon__body a.face__:hover{
+    background: #3b5998;
+}
+.icon__body a:hover i{
+    color: #fff;
+}
+.icon__body a.ins__{
+    border: 1px solid #000;
+}
+.icon__body a.ins__:hover{
+    background: #000;
+}
+.icon__body a.twi__{
+    border: 1px solid #00acee;
+}
+.icon__body a.twi__:hover{
+    background: #00acee;
+}
+.some__text___body__bottom{
+    width: 80%;
+    margin: 0 auto;
+}
+.some__text___body__bottom span{
+    font-size: 14px;
+    color: #ffa500;
+    font-style: italic;
+    margin-bottom: -5px;
+}
+.some__text___body__bottom p{
+    font-size: 11px;
+    font-style: italic;
+    margin-top: -5px;
+}
+.shape__1{
+    position: absolute;
+    top: 1.5%;
+    left: 1%;
+    height: 100%;
+    width: 98%;
+    background-color: #fff;
+    z-index: -1;
+    border-radius: 30px;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px -6px rgb(34 34 34 / 70%);
+    cursor: pointer;
+}
+.shape__1:hover{
+    border-bottom: 1px solid #ffa500;
+    border-left: 1px solid #ffa500;
+    border-right: 1px solid #ffa500;
+}
+ .shape__2{
+    position: absolute;
+    top: 2.5%;
+    left: 2%;
+    height: 100%;
+    width: 96%;
+    background-color: rgb(255, 255, 255);
+    z-index: -2;
+    border-radius: 30px;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px -6px rgb(34 34 34 / 70%);
+    cursor: pointer;
+}
+.shape__2:hover{
+    border-bottom: 1px solid #ffa500;
+    border-left: 1px solid #ffa500;
+    border-right: 1px solid #ffa500;
+}
+.shape__3{
+    position: absolute;
+    top: 3.5%;
+    left: 3%;
+    height: 100%;
+    width: 94%;
+    background-color: rgb(255, 255, 255);
+    z-index: -3;
+    border-radius: 30px;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px -6px rgb(34 34 34 / 70%);
+    cursor: pointer;
+}
+.shape__3:hover{
+    border-bottom: 1px solid #ffa500;
+    border-left: 1px solid #ffa500;
+    border-right: 1px solid #ffa500;
+} 
+.click__text{
+    margin-top: 20px;
+}
+
+/*===================== footer section start ================= */
+
+.Footer___text{
+    width: 1050px !important;
+    margin: 0 auto !important;
+}
+.read___miracle{
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 16px;
+}
+.read___miracle a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size:14px;
+}
+.read___miracle a:hover{
+    text-decoration: underline;
+}
+.right__siter__after img{
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.right__siter__after{
+    padding: 5px;
+    justify-content: end;
+}
+.id___profile h6{
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+.id___profile a{
+    color: #3278D2;
+    font-size: 14px;
+    text-decoration: none;
+}
+.id___profile a:hover{
+    text-decoration: underline;
+}
+.left__siter__after span a{
+    padding: 5px;
+}
+.left__siter__after span a i{
+    color: #B3B2B2;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.left__siter__after span a i.ist__{
+    color: #B3B2B2 !important;
+    font-size: 20px !important;
+}
+.left__siter__after {
+    margin-top: 30px;
+}
+.left__siter__after span a:hover i.ist__{
+    color: #000 !important;
+}
+.left__siter__after span a:hover i.tw__{
+    color: #00acee;
+}
+.left__siter__after span a:hover i.fb__{
+    color: #3b5998;
+}
+.main___footer p{
+    font-size: 12px;
+}
+.main___footer p a{
+    text-decoration: none;
+    color: #B3B2B2;
+}
+.main___footer p a:hover{
+    text-decoration: underline;
+}
+select{
+    font-size: 13px;
+    outline: none;
+    border: 1px solid #FFC000;
+    color: #7F7F7F;
+    padding: 4px 11px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+select:hover{
+    border: 1px solid #fd7e14;
+}
+option:hover{
+    background-color: gray !important;
+}
+.registration_popup{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+.registration_popup2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+.visible{
+    visibility: visible;
+    opacity: 1;
+}
+.main__registration__div{
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #FFC000;
+    border-radius: 20px;
+    box-shadow: 0px 0px 22px #00000026;
+    margin: 0 20px;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(0.76, 0.15, 0, 1.15);
+}
+.main__registration__div2{
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #FFC000;
+    border-radius: 20px;
+    box-shadow: 0px 0px 22px #00000026;
+    margin: 0 20px;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(0.76, 0.15, 0, 1.15);
+}
+.header__registraion2 h1{
+    color: #000 !important;
+    font-size: 25px;
+    font-weight: 500 !important;
+    margin-bottom: 20px;
+}
+.header__registraion2 p{
+    font-weight: 400;
+    font-size: 14px;
+}
+.fonm___popup2 label{
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 1px;
+}
+.fonm___popup2 span{
+    margin-bottom: 0 !important;
+}
+.scale1{
+    transform: scale(1);
+}
+.header__registraion h4{
+    color: #000;
+    font-size: 20px;
+    font-size: 500;
+    margin-bottom: 0;
+}
+.header__registraion h3{
+    color: #08a53b;
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 25px;
+}
+.yearly{
+    color: #08a53b;
+    margin-top: -10px;
+}
+.membership{
+    margin-top: -10px;
+    font-size: 14px;
+}
+.header__registraion .alredy{
+    margin-top: -15px;
+    color: #000;
+}
+.header__registraion .alredy a{
+    color: #FFC000;
+}
+.fonm___popup span{
+    border: 1px solid rgb(121, 120, 120);
+    border-radius: 5px;
+    padding: 6px 0 !important;
+    width: 99% !important;
+    margin-bottom: 7px;
+}
+
+.fonm___popup span.Password {
+    padding: 1px 0 !important;
+    width: 100% !important;
+}
+
+
+.fonm___popup span i{
+    padding: 3px 5px;
+    font-size: 20px;
+    width: 8%;
+}
+.fonm___popup span i.fa-ellipsis-h1{
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    font-size: 18px;
+}
+.fonm___popup span i.fa-ellipsis-h2{
+    position: absolute;
+    bottom: 5px;
+    left: 2px;
+    font-size: 18px;
+}
+.dot_icon{
+   position: relative;
+   width: 10%;
+}
+.fonm___popup input{
+    width: 90%;
+    outline: none;
+    padding:3px;
+    border: none;
+    border-radius: 5px;
+}
+.fonm___popup label{
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+input[type="submit"]{
+    background-color: gray;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: 5px;
+    text-shadow: 1px 2px 7px #0000008a;
+    font-size: 17px;
+    width: 100% !important;
+    border-radius: 5px;
+
+}
+.color____bg{
+    background-color: #f2d369 !important;
+}
+.absolute__crose{
+    position: absolute;
+    top: 19px;
+    right: 17px;
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+}
+
+
+
+
+/************** responsive ************ */
+@media (max-width:767px) {
+    .header___top{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        transition: 0.3s;
+    }
+    .top__img{
+        margin-top: -65px !important;
+        margin-bottom: 25px !important;  
+        transition: 0.3s; 
+    }
+    .top__img img{
+        width:130px;
+        height: 130px;
+        transition: 0.3s;
+    }
+    .Wraper__ {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+    }
+    .main___body{
+        margin-top: 3.9rem !important;
+        width: 80%;
+        margin: 0 auto;
+        transition: 0.3s;
+    }
+    .main___body p {
+        padding: 0px 0px !important;
+        padding-bottom: 35px !important;
+        font-size: 14px !important;
+    }
+    .sms___icon {
+        margin-bottom: 40px !important;
+    }
+    .right__siter__after{
+        text-align: center !important;
+    }
+    .right__siter__after{
+        justify-content: center !important;
+    }
+    .seclect_____{
+        position: absolute;
+        top: 5.6%;
+        right: 3%;
+    }
+    .select__section select{
+        font-size: 13px !important;
+        padding: 3px !important;
+        margin-bottom: -15px !important;
+    }
+    .signup__and__registration{
+        position: absolute;
+        top: 2.5%;
+        right: 5.5%;
+    }
+    .footer___body__shear__icon span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+}
+@media (max-width:575px) {
+    .details____body {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .main___body{
+        margin-top: 3.9rem !important;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .top__img img{
+        width:120px;
+        height: 120px;
+        transition: 0.3s;
+    }
+}
+@media (max-width:400px) {
+    .main___body{
+       width: 100%;
+    }
+}

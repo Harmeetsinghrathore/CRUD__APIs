@@ -4,7 +4,6 @@ import "./ViewAllQuotes.css";
 import { Link } from "react-router-dom";
 import { EditQuote } from "../EditQuote/EditQuote";
 
-
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -19,9 +18,11 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export const ViewAllQuotes = () => {
   const [quotes, setQuotes] = useState([]);
   const [open, setOpen] = React.useState(false);
-  const [quote_by, setQuoteBy] = useState("Warren Buffets");
+  const [quote_by, setQuoteBy] = useState("");
+  const [quote, setQuote] = useState("");
 
   const handleClickOpen = () => {
+
     setOpen(true);
   };
 
@@ -47,16 +48,17 @@ export const ViewAllQuotes = () => {
   // ________ DELETE QUOTE API _________
 
   const deleteQuote = async (id) => {
-    // const url = `http://127.0.0.1:8000/api/delete-a-quote/${id}`;
-    // await axios
-    // .delete(url)
-    // .then( (response) => {
-    //   console.log('Successfull response', response);
-    // })
-    // .catch( (error) => {
-    //   console.log('Line 33 deleteQuote()', error);
-    // })
-    alert("Warning");
+    console.log("we have id", id);
+    const url = `http://127.0.0.1:8000/api/delete-a-quote/${id}`;
+    await axios
+      .delete(url)
+      .then((response) => {
+        console.log("Successfull response", response);
+        getQuotes();
+      })
+      .catch((error) => {
+        console.log("Line 33 deleteQuote()", error);
+      });
   };
 
   useEffect(() => {
@@ -72,15 +74,16 @@ export const ViewAllQuotes = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Quote by " + quote_by }</DialogTitle>
+        <DialogTitle>{"Quote by " + quote_by}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            {quote}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <button className="btn btn-secondary" onClick={handleClose}>Close</button>
-          
+          <button className="btn btn-secondary" onClick={handleClose}>
+            Close
+          </button>
         </DialogActions>
       </Dialog>
       <div>
@@ -90,6 +93,7 @@ export const ViewAllQuotes = () => {
             <ul className="nav-item p-3"> Dashboard </ul>{" "}
           </Link>
           <Link to="/add-quote" className="link">
+            {" "}
             <ul className="nav-item p-3"> Add Quotes </ul>{" "}
           </Link>
           <Link to="/view-all-quotes" className="link">
@@ -133,15 +137,37 @@ export const ViewAllQuotes = () => {
                     <td> {quote.quote_by}</td>
                     <td> {quote.quote.slice(0, 10) + " ...."}</td>
                     <td>
-                      <button className="btn btn-success m-1" variant="outlined" onClick={handleClickOpen}> View </button>
+                      <button
+                        className="btn btn-success m-1"
+                        variant="outlined"
+                        // onClick={handleClickOpen(quote)}
+                        onClick={ () => {
+                          setQuote(quote.quote);
+                          setQuoteBy(quote.quote_by);
+                          handleClickOpen(quote)
+                        }}
+                      >
+                        {" "}
+                        View{" "}
+                      </button>
                       <button
                         className="btn btn-primary m-1"
-                        onClick={<EditQuote _id={quote.quote._id} />}
+                        onClick={<EditQuote _id={quote.quote._id}/>}
                       >
                         {" "}
                         Edit{" "}
                       </button>
-                      <button className="btn btn-danger m-1"> Delete </button>
+                      <button
+                        className="btn btn-danger m-1"
+                        type="button"
+                        onClick={() => {
+                          console.log("Here it is");
+                          deleteQuote(quote._id);
+                        }}
+                      >
+                        {" "}
+                        Delete{" "}
+                      </button>
                     </td>
                   </tr>
                 </>

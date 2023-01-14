@@ -13,6 +13,7 @@ exports.IS_ADMIN = (req, res, next) => {
 }
 
 
+
 exports.IS_SUBSCRIBED = (req, res, next) => {
 
     if(req.headers.is_subscribed != true && req.headers.is_admin != true){
@@ -21,8 +22,6 @@ exports.IS_SUBSCRIBED = (req, res, next) => {
     if(req.headers.is_admin == true || req.headers.is_subscribed == true ) {
         next();
     }
-
-
 }
 
 exports.IS_AUTHENTICATED = (req, res, next) => {
